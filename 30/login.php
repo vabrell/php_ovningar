@@ -7,8 +7,9 @@ if (isset($_POST['submit'])) {
   $name = $_POST['name'];
 
   if (!empty($_SESSION[$name])) {
-    if ($name === $_SESSION[$name]['name']
-        && $_POST['password'] === $_SESSION[$name]['password']) {
+    $password = $_SESSION[$name]['salt'] . $_POST['password'];
+
+    if ($name === $_SESSION[$name]['name'] && password_verify($password, $_SESSION[$name]['password'])) {
           $date = new DateTime();
 
           $_SESSION['user'] = [
