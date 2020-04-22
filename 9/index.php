@@ -13,6 +13,8 @@ function sum()
     $sum += $arg;
   }
 
+  sort($arguments);
+
   if ($total % 2 == 1) {
     $median = floor($total / 2);
   } else {
