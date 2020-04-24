@@ -29,11 +29,21 @@ class Dog {
   public function getAge() {
     return $this->age;
   }
+
+  /**
+   * Add one year to the dogs age
+   * 
+   * @return void
+   */
+  public function addOneYear() {
+    $this->age++;
+  }
 }
 
 $dog1 = new Dog('Gray', 'Grayhound', 12);
 $dog2 = new Dog('Gold', 'Goldenretriver', 5);
 $dog3 = new Dog('Brown', 'Dachshund', 8);
+$dog3->addOneYear();
 
 echo "<h2>", $dog1->name, "</h2>", "<p>Color: ", $dog1->color, "</p><p>Age: ", $dog1->getAge(), "</p>";
 
