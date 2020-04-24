@@ -22,12 +22,22 @@ class Product {
   private $image;
   private $price;
 
+  /**
+   * Construct a product
+   * 
+   * @param {String} $name The name of the product
+   * @param {String} $image A link to the product image
+   * @param {Float} $price The price of the product
+   */
   public function __construct(String $name, String $image, Float $price) {
     $this->name = $name;
     $this->image = $image;
     $this->price = $price;
   }
 
+  /**
+   * Render a HTML element of the product
+   */
   public function render() {
     return "<div><h1>$this->name</h1><img src='$this->image' alt='$this->name'><p>$this->price kr</p>";
   }
