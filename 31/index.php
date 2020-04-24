@@ -1,33 +1,35 @@
 <?php
-
-class Dog {
+class Book {
   /**
    * Public variables
    */
-  public $color;
-  public $name;
-  public $age;
+  public $title;
+  public $pages;
+  public $author;
 
   /**
-   * Construct the Dog
+   * Construct the book
    * 
-   * @param {String} $color The color of the dog
-   * @param {String} $name The name of the dog
-   * @param {Int} $age The age of the dog
+   * @param {String} $title The title of the book
+   * @param {Int} $pages The total pages of the book
+   * @param {String} $author The author of the book
    */
-  public function __construct(String $color, String $name, Int $age) {
-    $this->color = $color;
-    $this->name = $name;
-    $this->age = $age;
+  public function __construct($title, $pages, $author) {
+    $this->title = $title;
+    $this->pages = $pages;
+    $this->author = $author;
+  }
+
+  /**
+   * Book
+   * 
+   * @return {String} Booktitle (Pages), Author
+   */
+  public function getBook() {
+    return "$this->title ($this->pages), $this->author";
   }
 }
 
-$dog1 = new Dog('Gray', 'Grayhound', 12);
-$dog2 = new Dog('Gold', 'Goldenretriver', 5);
-$dog3 = new Dog('Brown', 'Dachshund', 8);
+$book = new Book('Moby dick', 1877, 'Herman Melville');
 
-echo "<h2>", $dog1->name, "</h2>", "<p>Color: ", $dog1->color, "</p><p>Age: ", $dog1->age, "</p>";
-
-echo "<h2>", $dog2->name, "</h2>", "<p>Color: ", $dog2->color, "</p><p>Age: ", $dog2->age, "</p>";
-
-echo "<h2>", $dog3->name, "</h2>", "<p>Color: ", $dog3->color, "</p><p>Age: ", $dog3->age, "</p>";
+echo $book->getBook();
