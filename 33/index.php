@@ -2,17 +2,17 @@
 $products = [
   [
     "name" => "Tröja",
-    "image" => "https =>//cdn.pixabay.com/photo/2016/03/16/21/43/t-shirt-1261820_960_720.png",
+    "image" => "https:/cdn.pixabay.com/photo/2016/03/16/21/43/t-shirt-1261820_960_720.png",
     "price" => 125
   ],
   [
     "name" => "Jeans",
-    "image" => "https =>//cdn.pixabay.com/photo/2015/09/05/21/57/girl-925635_960_720.jpg",
+    "image" => "https://cdn.pixabay.com/photo/2015/09/05/21/57/girl-925635_960_720.jpg",
     "price" => 565
   ],
   [
     "name" => "Munktröja",
-    "image" => "https =>//cdn.pixabay.com/photo/2017/09/19/19/16/angry-2766265_960_720.jpg",
+    "image" => "https://cdn.pixabay.com/photo/2017/09/19/19/16/angry-2766265_960_720.jpg",
     "price" => 375
   ]
 ];
