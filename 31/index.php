@@ -1,8 +1,7 @@
 <?php
+
 class Book {
-  /**
-   * Public variables
-   */
+  
   public $title;
   public $pages;
   public $author;
