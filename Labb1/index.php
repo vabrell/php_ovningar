@@ -21,18 +21,19 @@ if (!Road::exists()) {
 
 if (isset($_POST['drive'])) {
   $result = $driver->planDrive()->drive();
-  $planned = implode(', ', $road->getStretchesByName($driver->plannedRoute));
-}
-
-if (!Map::exists()) {
-  $route = "This is the first stretch of road, I'll have to guess.";
+  $planned = $road->getStretchesByName($driver->plannedRoute);
+  $planned = array_map(function($stretch) {
+    return ucfirst($stretch);
+  }, $planned);
+  $planned = implode(', ', $planned);
 }
 
 $map = new Map;
 
 if (isset($_POST['new_road'])) {
-  $road->removeRoad();
-  $map->removeMap();
+  $road->remove();
+  $map->remove();
+  $driver->remove();
   header('Location: ./');
 }
 

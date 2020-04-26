@@ -10,6 +10,7 @@ class Map {
    * Construct the map
    */
   public function __construct() {
+    // Get the map and set it
     $this->setMap();
   }
   
@@ -19,6 +20,7 @@ class Map {
    * @return Boolean true | false
    */
   static function exists() {
+    // Check if the file exists
     return file_exists(self::PATH);
   }
 
@@ -28,6 +30,7 @@ class Map {
    * @return Array The map
    */
   public function getMap() {
+    // Return the map
     return $this->map;
   }
 
@@ -77,7 +80,8 @@ class Map {
    * 
    * @return void
    */
-  public function removeMap() {
+  public function remove() {
+    // Remove the map file
     unlink(self::PATH);
   }
 }
