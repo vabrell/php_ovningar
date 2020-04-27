@@ -1,0 +1,2 @@
+Detta är lite text i en fil.
+Lite mer text på en ny rad.
