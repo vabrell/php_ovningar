@@ -87,8 +87,8 @@ $exchangeRates = Bank::getExchangeRates();
   <div>
     <h2>Valutakurs</h2>
     <?php
-      foreach ($exchangeRates AS $valuta => $rate) {
-        echo "<p>$valuta: $rate</p>";
+      foreach ($exchangeRates AS $currency => $rate) {
+        echo "<p>$currency: $rate</p>";
       }
     ?>
   </div>
