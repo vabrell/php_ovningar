@@ -55,10 +55,10 @@ class Driver {
 
     // Check if the drive was successful
     if ($match) {
-      $result = 'Correct way!';
+      $result = 'car-alt';
       Map::updateMap($this->next);
     } else {
-      $result = 'Crash!';
+      $result = 'car-crash';
       // Update crash info
       $this->writeCrashReport($index, $road->translate($this->next)); 
     }
