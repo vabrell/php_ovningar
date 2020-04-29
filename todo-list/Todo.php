@@ -1,6 +1,7 @@
 <?php
 
-class Todo {
+class Todo
+{
     public $task;
     public $completed;
 
@@ -12,7 +13,7 @@ class Todo {
      */
     public function __construct(String $task, Bool $completed)
     {
-       $this->task = $task;
-       $this->completed = $completed; 
+        $this->task = $task;
+        $this->completed = $completed;
     }
 }

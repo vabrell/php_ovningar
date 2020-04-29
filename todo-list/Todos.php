@@ -2,13 +2,15 @@
 
 require 'Todo.php';
 
-class Todos {
+class Todos
+{
     private $todos;
 
     /**
      * Construct a new Todo object
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->todos = $_SESSION['todos'] ?? [];
     }
 
@@ -17,9 +19,10 @@ class Todos {
      * 
      * @return Array List of todos
      */
-    public function get() {
+    public function get()
+    {
         // Return the list of todos
-        return array_map(function($todo) {
+        return array_map(function ($todo) {
             return unserialize($todo);
         }, $this->todos);
     }
@@ -31,7 +34,8 @@ class Todos {
      * 
      * @return void
      */
-    public function store(String $todo) {
+    public function store(String $todo)
+    {
         // Prepend the new todo
         array_unshift($this->todos, serialize(new Todo($todo, false)));
 
@@ -48,7 +52,8 @@ class Todos {
      * 
      * @param Int $todo The index of the todo
      */
-    public function update(Int $todo) {
+    public function update(Int $todo)
+    {
         // Update the todo to completed
         $TODO = unserialize($_SESSION['todos'][$todo]);
         $TODO->completed = true;
