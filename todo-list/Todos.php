@@ -7,7 +7,7 @@ class Todos
     private $todos;
 
     /**
-     * Construct a new Todo object
+     * Construct a new Todos object
      */
     public function __construct()
     {
