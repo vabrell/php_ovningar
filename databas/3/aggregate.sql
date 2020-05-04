@@ -7,7 +7,7 @@ SELECT AVG(specimens) AS average_animals FROM animals;
 -- Skriv ut högsta värdet som finns i kolumnen specimen.
 SELECT MAX(specimens) AS most_animals FROM animals;
 
--- Skriv ut bpde namn och antal för den djurart som har flest antal specimens.
+-- Skriv ut både namn och antal för den djurart som har flest antal specimens.
 SELECT category, SUM(specimens) AS specimens FROM animals GROUP BY category ORDER BY specimens DESC LIMIT 1;
 
 -- Skriv ut hur många arter som ingår i kategorin däggdjur.
