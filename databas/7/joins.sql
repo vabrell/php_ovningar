@@ -2,7 +2,7 @@
 CREATE TABLE categories (id INT PRIMARY KEY AUTO_INCREMENT, category VARCHAR(30));
 
 -- När du gjort detta kan du skriva en query som hämtar värden från en tabell och sparar dem i en annan. Detta kan du göra med query-formen INSERT INTO SELECT:https://dev.mysql.com/doc/refman/8.0/en/insert-select.html I INSERT-delen av queryn ska du ange vilken eller vilka kolumner som ska få värden, och i SELECT del en väljer du ut de distinkta värdena som finns i animals-tabellens kolumn Category.
-INSERT INTO categories (category) SELECT a.category FROM (SELECT DISTINCT category FROM animals) a;
+INSERT INTO categories (category) SELECT DISTINCT category FROM animals;
 
 -- Därefter ändrar du i animals-tabellen, så att den får ytterligare en kolumn som heter category_id (INT). Detta kan du antingen göra via struktur-fliken i PHPMyAdmin eller genom att skriva en query i SQL-fliken. Den queryen ska i så fall skrivas som det beskrivs i https://dev.mysql.com/doc/refman/8.0/en/alter-table.html
 ALTER TABLE animals ADD (category_id INT);
