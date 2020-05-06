@@ -11,4 +11,4 @@ SELECT * FROM (SELECT * FROM animals WHERE category IN ('fågel', 'fisk')) a ORD
 SELECT * FROM animals WHERE specimens = (SELECT specimens FROM animals WHERE name = 'Ekoxe');
 
 -- Skriv en subquery som hämtar information om medelvärdet på specimens för däggdjuren. Använd sedan detta värde för att hämta fram namnen på de övriga djur (som inte är däggdjur) som har fler specimens.
-SELECT * FROM animals WHERE specimens > (SELECT AVG(specimens) FROM animals WHERE category = 'däggdjur' GROUP BY category) AND category != 'däggdjur';
+SELECT * FROM animals WHERE specimens > (SELECT AVG(specimens) FROM animals WHERE category = 'däggdjur') AND category != 'däggdjur';
