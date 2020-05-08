@@ -42,7 +42,7 @@ WHERE customer_id = (
 
 -- Visa alla köp som gjorts under en viss månad. Ta stöd i de Date & time-funktioner​ som finns i MySql.
 SELECT * FROM orders
-WHERE date BETWEEN TIMESTAMP('2020-05-01') AND TIMESTAMP('2020-05-31');
+WHERE Month(date) = 5;
 
 -- Lista alla produkter och antal sålda enheter för varje. (Exempel: Häftklammer, 22st)
 SELECT  name,
