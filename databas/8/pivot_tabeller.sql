@@ -47,6 +47,7 @@ GROUP BY title;
 
 -- Skriv nu en query som hämtar all information om en skådespelare, samt vilka filmer den varit med i.
 SELECT  name,
+        year,
         GROUP_CONCAT(title) AS movies
 FROM actors
 JOIN movies ON movies.id IN (
