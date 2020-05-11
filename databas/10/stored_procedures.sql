@@ -16,7 +16,7 @@ WHERE name LIKE '%a';
 -- Skapa en procedure som flyttar alla djur som finns i area 2 till area 3.
 DELIMITER $$
 
-CREATE PROCEDURE move_to_area_2()
+CREATE PROCEDURE move_to_area_3()
 BEGIN
     UPDATE animals
     SET animals.area_id = 3
@@ -25,7 +25,7 @@ END $$
 
 DELIMITER ;
 
-CALL move_to_area_2();
+CALL move_to_area_3();
 
 -- Skapa en procedure som flyttar alla djur från en area till en annan. Låt proceduren ta emot två argument (den area som djuren finns i,respektive den area dit de ska).
 DELIMITER $$
