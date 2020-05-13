@@ -1,6 +1,7 @@
 <?php
 
 require('Database.php');
+require('Animal.php');
 $db = new Database;
 
 $animal_id = 1;
@@ -13,4 +14,6 @@ $stmt->execute([$animal_id]);
 
 $animal = $stmt->fetch(PDO::FETCH_OBJ);
 
-echo "<p>$animal->name</p>";
+echo "<pre>";
+print_r($animal);
+echo "</pre>";
