@@ -13,7 +13,7 @@ class Database {
         try {
             $dsn = "mysql:host=$this->host;dbname=$this->dbName";
             $this->conn = new PDO($dsn, $this->username, $this->password);
-        } catch (Exception $e) {
+        } catch (PDOException $e) {
             throw new Exception("Något gick fel: " . $e->getMessage());
         }
     }
